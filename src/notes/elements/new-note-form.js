@@ -8,8 +8,9 @@ function NewNoteForm(props) {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         onSubmit({
-            content: textareaRef.current.value,
+            content: textareaRef.current?.value,
         });
+        textareaRef.current.value = '';
     }
 
     return (

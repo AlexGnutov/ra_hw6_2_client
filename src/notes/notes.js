@@ -1,30 +1,17 @@
 import NewNoteForm from "./elements/new-note-form";
 import NotesList from "./elements/notes-list";
 import MainBar from "./elements/main-bar";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const URL = 'https://hw6-2server.herokuapp.com';
-const sampleData =[
-    {
-        id: 1,
-        content: "First Note"
-    },
-    {
-        id: 2,
-        content: "First Note"
-    },
-    {
-        id: 3,
-        content: "First Note"
-    },
-    {
-        id: 4,
-        content: "First Note"
-    }
-];
 
 function Notes(props) {
-    const [notes, setNotes] = useState(sampleData);
+    const [notes, setNotes] = useState([]);
+
+    useEffect(()=> {
+        getNotes();
+    }, []);
+
 
     const getNotes = () => {
         fetch(URL + '/notes')
