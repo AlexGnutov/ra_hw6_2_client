@@ -1,38 +1,59 @@
-.App {
+* {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.notes-application {
+  width: 600px;
+  margin: 0 auto;
+}
+
+/*form styles*/
+.notes-form {
   text-align: center;
+  padding: 10px;
+  border: 1px solid darkgrey;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.notes-form-textarea {
+  width: 500px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/**/
+.notes-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+/*note styles*/
+.notes-note {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  min-height: 50px;
+  border: 1px solid darkgrey;
+  padding: 20px 10px;
+}
+.note-text {
+
+}
+.note-delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*main-bar*/
+.main-bar {
+  position: relative;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.main-bar-refresh {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
